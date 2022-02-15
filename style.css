@@ -43,6 +43,9 @@ header ul li
     list-style: none;
     margin-left: 30px;
 }
+header .mobile{
+    margin-top: 30px;
+}
 header li a
 {
     text-decoration: none;
@@ -55,6 +58,9 @@ header ul li a.active
 {
     background: #fff;
     color: #2b1055;
+}
+header .mobile{
+    display: none;
 }
 section
 {
@@ -121,4 +127,17 @@ section img#mountains_front
 {
     font-size: 1.2em;
     color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+    section{
+        height: 800px;
+        width: auto;
+    }
+    header .mobile{
+        display: inline-block; 
+    }
+    header .desktop{
+        display: none;
+    }
 }
