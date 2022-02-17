@@ -5,10 +5,12 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 body
 {
     min-height: 100vh;
+    overflow-x: hidden;
 	background: linear-gradient(#2b1055,#7597de);
 }
 header
@@ -43,6 +45,9 @@ header ul li
     list-style: none;
     margin-left: 30px;
 }
+header .mobile{
+    margin-top: 30px;
+}
 header li a
 {
     text-decoration: none;
@@ -56,6 +61,9 @@ header ul li a.active
     background: #fff;
     color: #2b1055;
 }
+header .mobile{
+    display: none;
+}
 section
 {
     position: relative;
@@ -65,6 +73,7 @@ section
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 section img
 {
@@ -87,6 +96,7 @@ section img#mountains_front
 #text
 {
     position: absolute;
+    right: -350px;
     color: #fff;
     white-space: nowrap;
     font-size: 7vw;
@@ -121,4 +131,17 @@ section img#mountains_front
 {
     font-size: 1.2em;
     color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+    section{
+        height: 800px;
+        width: auto;
+    }
+    header .mobile{
+        display: inline-block; 
+    }
+    header .desktop{
+        display: none;
+    }
 }

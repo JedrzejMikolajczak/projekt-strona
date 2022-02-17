@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>Swietna nazwa</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Swietna nazwa</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<header>
-			<a href="#" class="logo">Swietna nazwa</a>
+			<li class="desktop"><a href="#" class="logo">Swietna nazwa</a></li>
 			<ul>
 				<li><a href="#"class="active">Home</a></li>
 				<li><a href="#">About</a></li>
-				<li><a href="https://www.instagram.com/">Contact</a></li>
-                
+				<li><a href="https://www.instagram.com/galaxypediaproject/">Contact</a></li>
+            	
 			</ul>
 		</header>
         <section>
@@ -19,10 +20,10 @@
             <img src="moon.png" id="moon">
             <img src="mountains_behind.png" id="mountains_behind">
             <h2 id="text">Nazwa</h2>
-			<a href="#" id="btn">Explore</a>
+			<a href="#sec" id="btn">Explore</a>
             <img src="mountains_front.png" id="mountains_front">
         </section>
-		<div class="sec">
+		<div class="sec" id="sec">
 			<h2> Tytuł informacji</h2>
 			<p> adasfdfadfkasdjkfkjajkdjklfjkldasjklfdjkljklfdajklfdajlkfadjklsdjklfjklasdfjadsokfjasdklfjda<br>
 				jhkdasfhjkashfjkdahjkfjkhhjkafd
@@ -31,5 +32,26 @@
 				jhkdasfhjkashfjkdahjkfjkhhjkafd
 			</p>
 		</div>
+		<script>
+			let moon = document.getElementById('moon');
+			let stars = document.getElementById('stars');
+			let mountains_behind = document.getElementById('mountains_behind');
+			let mountains_front = document.getElementById('mountains_front');
+			let text = document.getElementById('text');
+			let btn = document.getElementById('btn');
+			let header = document.querySelector('header');
+
+			window.addEventListener('scroll', function(){
+				let value = window.scrollY;
+				stars.style.left = value * 0.1 + 'px';
+				moon.style.top = value * 0.55 + 'px';
+				mountains_behind.style.top = value * 0.5 + 'px';
+				mountains_front.style.top = value * 0 + 'px';
+				text.style.marginRight = value * 3 + 'px';
+				text.style.marginTop = value * 1.2 + 'px';
+				btn.style.marginTop = value * 1.5 + 'px';
+				header.style.top = value * 0.5 + 'px';
+			})
+		</script>
 	</body>
 </html>
