@@ -148,9 +148,9 @@ section img#mountains_front
 .slider_frame{
     overflow: hidden;
     height: 800px;
-    width: 1200px;
+    width: 2000px;
     margin-left: 360px;
-    margin-top: 200px;
+    margin-top: 0px;
 }
 @-webkit-keyframes slide_animation{
     0% {left: 0px;}
