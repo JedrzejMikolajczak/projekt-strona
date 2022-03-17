@@ -252,7 +252,24 @@ button{
     background-size: cover;
     transition: transform 0.5s;
 }
+.card2{
+    width: 700px;
+    height: 660px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(merkury.webp);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
 .card:hover{
+    transform: translateY(-10px);
+}
+.card2:hover{
     transform: translateY(-10px);
 }
 h5{
