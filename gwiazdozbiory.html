@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Galaxypedia</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+<head>
+    <title>Galaxypedia</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#text1").fadeOut(0);
+            $("#text2").fadeOut(0);
+            $("#text3").fadeOut(0);
+            $("#text4").fadeOut(0);
+            $("#div1").hover(function () {
+                $("#text1").fadeIn();
+            }, function () {
+                $("#text1").fadeOut();
+            });
+            $("#div2").hover(function () {
+                $("#text2").fadeIn();
+            }, function () {
+                $("#text2").fadeOut();
+            });
+            $("#div3").hover(function () {
+                $("#text3").fadeIn();
+            }, function () {
+                $("#text3").fadeOut();
+            });
+            $("#div4").hover(function () {
+                $("#text4").fadeIn();
+            }, function () {
+                $("#text4").fadeOut();
+            });
+        });
+    </script>
+</head>
     <body>
         <header>
             <li class="desktop"><a href="index.html" class="logo">Galaxypedia</a></li>
@@ -22,24 +51,53 @@
                     <h1>Gwiazdozbiory</h1>
                 </div>
                 <div class="col">
-                    <div class="card" style="background-image: url(malaNiedzwiedzica.jpg); position: relative; top: 40px;">
-                        <h5>Mała niedźwiedzica</h5>
+                    <div class="card" id="div1" style="background-image: url(malaNiedzwiedzica.jpg); position: relative; top: 40px;">
+                        <h5>Mała Niedźwiedzica</h5>
                         <p id="dif">
-                            <ul>
-                                <li> 56. co do wielkości konstelacja</li>
-                                <li> w Polsce widoczna przez cały rok,</li>
-                                <li> zawiera gwiazdę polarną,</li>
-                                <li> inna nazwa to Mały Wóz,</li>
-                            </ul>
+                            <div class="gwiazdozbioryText" id="text1">
+                                <ul>
+                                    <li> 56. co do wielkości konstelacja,</li>
+                                    <li> w Polsce widoczna przez cały rok,</li>
+                                    <li> zawiera gwiazdę polarną,</li>
+                                    <li> inna nazwa to Mały Wóz,</li>
+                                </ul>
+                            </div>
                     </div>
-                    <div class="card" style="position: relative; top: 40px;">
-                        &nbsp;
+                    <div class="card" id="div2" style="background-image: url(wielkaNiedzwiedzica.jpg); position: relative; top: 40px;">
+                        <h5>Wielka Niedźwiedzica</h5>
+                        <p id="dif">
+                            <div class="gwiazdozbioryText" id="text2">
+                                <ul>
+                                    <li> 3. co do wielkości konstelacja nieba,</li>
+                                    <li> w Polsce widoczna przez cały rok,</li>
+                                    <li> 125 gwiazd dostrzegalnych nieuzbrojonym okiem,</li>
+                                    <li> zawiera Wielki Wóz,</li>
+                                </ul>
+                            </div>
                     </div>
-                    <div class="card" style="position: relative; top: 40px;">
-                        &nbsp;
+                    <div class="card" id="div3" style="background-image: url(krzyzPoludnia.jpg); position: relative; top: 40px;">
+                        <h5>Krzyż Południa</h5>
+                        <p id="dif">
+                            <div class="gwiazdozbioryText" id="text3">
+                                <ul>
+                                    <li> najmniejszy, 88. co do wielkości, gwiazdozbiór nieba,</li>
+                                    <li> charakterystyczny dla nieba południowego,</li>
+                                    <li> dłuższe ramię krzyża wskazuje w przybliżeniu południowy biegun niebieski,</li>
+                                    <li> w szerokościach geograficznych Europy nie jest współcześnie widoczny,</li>
+                                </ul>
+                            </div>
                     </div>
-                    <div class="card" style="position: relative; top: 40px;">
-                        &nbsp;
+                    <div class="card" id="div4" style="background-image: url(orion.jpg); position: relative; top: 40px;">
+                        <h5>Orion</h5>
+                        <p id="dif">
+                            <div class="gwiazdozbioryText" id="text4">
+                                <ul>
+                                    <li> 26. co do wielkości konstelacja,</li>
+                                    <li> w szerokości geograficznej Polski widoczna od października do końca lutego,</li>
+                                    <li> 120 gwiazd dostrzegalnych nieuzbrojonym okiem,</li>
+                                    <li> zawiera charakterystyczny pas,</li>
+                                </ul>
+                            </div>
                     </div>
                 </div>
             </div>
